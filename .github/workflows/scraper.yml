@@ -1,0 +1,49 @@
+name: Daily TikTok Scraper
+
+on:
+  schedule:
+    # Run at 9am UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+        
+      # Download previous snapshot artifacts to calculate deltas
+      - name: Fetch Previous Snapshot
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: scraper.yml
+          name: snapshots
+          path: snapshots/
+          
+      - name: Run Scraper
+        env:
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scheduler.py --now
+        
+      # Upload the new snapshot for tomorrow's run
+      - name: Upload Current Snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots
+          path: snapshots/
+          retention-days: 7
