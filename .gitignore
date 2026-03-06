@@ -1,0 +1,10 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+scraper.log
+snapshots/
+last_snapshot.json
+credentials.json
+token.json
+

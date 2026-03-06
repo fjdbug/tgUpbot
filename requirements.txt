@@ -1,0 +1,6 @@
+apify-client
+python-telegram-bot
+python-dotenv
+apscheduler
+gspread
+google-auth

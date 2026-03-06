@@ -1,0 +1,82 @@
+{
+  "accounts": [
+    {
+      "username": "liamjohnson9211",
+      "label": "Liam Johnson",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "olivia_smith_x",
+      "label": "Olivia Smith",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "itsnoahwilliams",
+      "label": "Noah Williams",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "ava_garcia_z",
+      "label": "Ava Garcia",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "will.rod.d",
+      "label": "Will Rodriguez",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "oliver.jones.77",
+      "label": "Oliver Jones",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "elijah.miller.23",
+      "label": "Elijah Miller",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "char_davis_88",
+      "label": "Charlotte Davis",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "sophia_mart_55",
+      "label": "Sophia Martinez",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "emma_brown_01",
+      "label": "Emma Brown",
+      "category": "AI Influencers",
+      "platform": "tiktok"
+    },
+    {
+      "username": "predictall_",
+      "label": "PredictAll",
+      "category": "Projects",
+      "platform": "tiktok"
+    },
+    {
+      "username": "copykat.io",
+      "label": "CopyKat",
+      "category": "Projects",
+      "platform": "tiktok"
+    },
+    {
+      "username": "konek.now",
+      "label": "KonekNow",
+      "category": "Projects",
+      "platform": "tiktok"
+    }
+  ]
+}
