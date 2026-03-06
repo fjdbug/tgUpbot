@@ -1,0 +1,10 @@
+services:
+  tgupbot:
+    build: .
+    container_name: tgupbot
+    env_file:
+      - .env
+    volumes:
+      - ./accounts.json:/app/accounts.json:ro
+      - ./data:/app/data
+    restart: unless-stopped
